@@ -1,4 +1,9 @@
-if (!require('dash')) install.packages('dash'); library('dash') # install dplyr and load it
+if (!require('devtools')) install.packages('devtools'); library('devtools') # install dplyr and load it
+
+install_github('plotly/dashR', upgrade = TRUE)
+
+library(dash)
+
 app <- Dash$new()
 
 app$layout(htmlDiv(list(htmlH2('Hello World'),
