@@ -1,4 +1,4 @@
-library(dash)
+if (!require('dash')) install.packages('dash'); library('dash') # install dplyr and load it
 app <- Dash$new()
 
 app$layout(htmlDiv(list(htmlH2('Hello World'),
